@@ -341,7 +341,7 @@ jobject getValueId(JNIEnv * env, OpenZWave::ValueID const * ozwValueId)
 		getValueGenre(env, ozwValueId->GetGenre()),
 		getJshort(ozwValueId->GetCommandClassId()),
 		getJshort(ozwValueId->GetInstance()),
-		getJshort(ozwValueId->GetIndex()),
+		getJshort((int16)ozwValueId->GetIndex()),
 		getValueType(env, ozwValueId->GetType())
 	);
 }
